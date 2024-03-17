@@ -37,7 +37,6 @@ const ContactForm = () => {
   const handlerSubmitContactFrom = useCallback(
     (e) => {
       e.preventDefault();
-
       const { name, phone, id } = state;
 
       if (!name || !phone) return;
@@ -63,27 +62,27 @@ const ContactForm = () => {
           <label className={styles.label}>
             <p className={styles.text}>Name</p>
             <input
-              type='text'
-              name='name'
+              type="text"
+              name="name"
               className={styles.input}
               value={state.name}
-              placeholder=' '
+              placeholder=" "
               onChange={handleInputChange}
             />
           </label>
           <label className={styles.label}>
             <p className={styles.text}>Phone</p>
             <input
-              type='number'
-              name='phone'
+              type="number"
+              name="phone"
               className={styles.input}
               value={state.phone}
-              placeholder=' '
+              placeholder=" "
               onChange={handleInputChange}
             />
           </label>
         </div>
-        <button type='submit' className={styles.button}>
+        <button type="submit" className={styles.button}>
           {userName ? "Edit contact" : "Add contact"}
         </button>
       </form>
